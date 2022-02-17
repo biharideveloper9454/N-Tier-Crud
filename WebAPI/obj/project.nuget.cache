@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zH6c5gbqt8zgXpFLxUPDxS+rFjg0eaxnrUgj2nJN4YHU7dLXkT5FeKdcOLl16DmbldLzskWVGzv/Jmnme+l0RA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sunilp2\\source\\repos\\N - Tier FirstProject\\WebAPI\\WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sunilp2\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,80 @@
+﻿@model CommonLayer.Models.ViewModel.EmployeeCreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="card-header text-center">Add Employee</h1>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="Create">
+                        <div class="form-group">
+                            <label asp-for="FirstName"></label>
+                            <input type="text" asp-for="FirstName" class="form-control" placeholder="Enter First Name" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="LastName"></label>
+                            <input type="text" asp-for="LastName" class="form-control" placeholder="Enter Last Name" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Gender"></label></br>
+                            <input type="radio" asp-for="Gender" value="Male" />  Male
+                            <input type="radio" asp-for="Gender" value="Female" />  Female
+                            <input type="radio" asp-for="Gender" value="Other" />  Other
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="City"></label>
+                            <input type="text" asp-for="City" class="form-control" placeholder="Enter Name" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Age"></label>
+                            <input type="text" asp-for="Age" class="form-control" placeholder="Enter Name" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Company"></label><br />
+                            <select asp-for="Company">
+                                <option value="0">--Select--</option>
+                                @foreach (var c in ViewBag.company)
+                                {
+                                    <option value="@c.Id">@c.Name</option>
+                                }
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="HighestQualification"></label>
+                            <input type="text" asp-for="HighestQualification" class="form-control" placeholder="Enter highest qualification" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PassingYear"></label>
+                            <input type="text" asp-for="PassingYear" class="form-control" placeholder="Enter passing year" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Percentage"></label>
+                            <input type="text" asp-for="Percentage" class="form-control" placeholder="Enter percentage" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="EmployerName"></label>
+                            <input type="text" asp-for="EmployerName" class="form-control" placeholder="Enter previous employer name" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Experience"></label>
+                            <input type="text" asp-for="Experience" class="form-control" placeholder="Enter your experience in months" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="LastWorkingDate"></label>
+                            <input type="text" asp-for="LastWorkingDate" class="form-control" placeholder=" Last workin date" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-sm btn-success" value="Submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
